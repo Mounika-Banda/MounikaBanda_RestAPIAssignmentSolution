@@ -1,13 +1,13 @@
-package com.greatlearning.student.service;
+package com.greatlearning.employee.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.greatlearning.student.entity.User;
-import com.greatlearning.student.repositories.UserRepository;
-import com.greatlearning.student.security.StudentUserDetails;
+import com.greatlearning.employee.entity.User;
+import com.greatlearning.employee.repositories.UserRepository;
+import com.greatlearning.employee.security.EmployeeUserDetails;
 
 public class UserServiceImpl implements UserDetailsService {
 
@@ -25,8 +25,8 @@ public class UserServiceImpl implements UserDetailsService {
 			throw new UsernameNotFoundException("User "+username+" not found!!!");
 		}
 
-		UserDetails studentUserDetails=new StudentUserDetails(user);
-		return studentUserDetails;
+		UserDetails employeeUserDetails=new EmployeeUserDetails(user);
+		return employeeUserDetails;
 	}
 
 }

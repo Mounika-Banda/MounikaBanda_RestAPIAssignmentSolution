@@ -1,4 +1,4 @@
-package com.greatlearning.student.security;
+package com.greatlearning.employee.security;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,15 +9,15 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.greatlearning.student.entity.Roles;
-import com.greatlearning.student.entity.User;
+import com.greatlearning.employee.entity.Roles;
+import com.greatlearning.employee.entity.User;
 
-public class StudentUserDetails implements UserDetails {
+public class EmployeeUserDetails implements UserDetails {
 
 
 	private User user;
 
-	public StudentUserDetails(User user) {
+	public EmployeeUserDetails(User user) {
 		this.user = user;
 	}
 

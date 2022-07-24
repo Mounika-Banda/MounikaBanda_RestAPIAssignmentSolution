@@ -1,4 +1,4 @@
-package com.greatlearning.student.entity;
+package com.greatlearning.employee.entity;
 
 import java.util.ArrayList;
 import java.util.List;

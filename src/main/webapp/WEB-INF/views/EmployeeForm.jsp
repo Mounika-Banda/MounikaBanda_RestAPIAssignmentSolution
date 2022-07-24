@@ -13,27 +13,21 @@
 		<table>
 			<tr>
 				<td>FirstName</td>
-				<td><input type="text" value="${student.firstname}"
+				<td><input type="text" value="${employee.firstname}"
 					name="firstname" /></td>
 			</tr>
 			<tr>
 				<td>LastName</td>
-				<td><input type="text" value="${student.lastname}"
+				<td><input type="text" value="${employee.lastname}"
 					name="lastname" /></td>
 			</tr>
 			<tr>
-				<td>Course</td>
-				<td><input type="text" value="${student.course}" name="course" />
-				</td>
-			</tr>
-			<tr>
-				<td>Country</td>
-				<td><input type="text" value="${student.country}"
-					name="country" /></td>
+				<td>email</td>
+				<td><input type="text" value="${employee.email}" name="email" /></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="hidden"
-					value='${student.studentid}' name="id" /><input type="submit" /></td>
+					value='${employee.employeeid}' name="id" /><input type="submit" /></td>
 			</tr>
 		</table>
 

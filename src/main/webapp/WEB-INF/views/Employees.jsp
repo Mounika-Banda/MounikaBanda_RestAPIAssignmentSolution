@@ -8,22 +8,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%-- Show Add Student and Logout Hyperlinks --%>
+	<%-- Show Add Employee and Logout Hyperlinks --%>
 	<table>
 		<tr>
-			<td><a href="students/addStudent">Add a new Book</a></td>
-			<td><a href="/Lab6/logout">Logout</a></td>
+			<td><a href="employees/addEmployee">Add a new Employee</a></td>
+			<td><a href="/GradedAssignment_EmployeeMgmt/logout">Logout</a></td>
 		</tr>
 	</table>
-	<form action="students/search" method="post">
+	<form action="employees/search" method="post">
 		<table>
 			<tr>
 				<td>FirstName</td>
 				<td><input type="text" name="firstname" /></td>
 			</tr>
 			<tr>
-				<td>Course</td>
-				<td><input type="text" name="course" /></td>
+				<td>LastName</td>
+				<td><input type="text" name="lastname" /></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" /></td>
@@ -31,25 +31,23 @@
 		</table>
 	</form>
 
-	<%-- Table to show Student details --%>
+	<%-- Table to show Employee details --%>
 	<table border="1">
 		<tr>
 			<th>Id</th>
 			<th>FirstName</th>
 			<th>LastName</th>
-			<th>Course</th>
-			<th>Country</th>
+			<th>Email</th>
 			<th>Action</th>
 		</tr>
-		<c:forEach items="${students}" var="b">
+		<c:forEach items="${employees}" var="b">
 			<tr>
-				<td>${b.studentid}</td>
+				<td>${b.employeeid}</td>
 				<td>${b.firstname}</td>
 				<td>${b.lastname}</td>
-				<td>${b.course}</td>
-				<td>${b.country}</td>
-				<td><a href="updateStudent?id=${b.studentid}">Update</a><a
-					href="deleteStudent?id=${b.studentid}">Delete</a></td>
+				<td>${b.email}</td>
+				<td><a href="updateEmployee?id=${b.employeeid}">Update</a><a
+					href="deleteEmployee?id=${b.employeeid}">Delete</a></td>
 			</tr>
 		</c:forEach>
 	</table>

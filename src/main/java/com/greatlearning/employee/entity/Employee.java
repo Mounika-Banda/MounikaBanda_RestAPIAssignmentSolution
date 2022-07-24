@@ -1,4 +1,4 @@
-package com.greatlearning.student.entity;
+package com.greatlearning.employee.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,13 +9,13 @@ import javax.persistence.Table;
 
 //Annotations for entity class
 @Entity
-@Table(name="students")
-public class Student {
+@Table(name="employees")
+public class Employee {
 
-	@Column(name="student_id")
+	@Column(name="employee_id")
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int studentid;
+	private int employeeid;
 
 	@Column(name="firstname")
 	private String firstname;
@@ -23,32 +23,30 @@ public class Student {
 	@Column(name="lastname")
 	private String lastname;
 
-	@Column(name="course")
-	private String course;
+	@Column(name="email")
+	private String email;
 
-	@Column(name="country")
-	private String country;
 
-	public Student() {
+
+	public Employee() {
 		super();
 	}
 
 	//Parameterized constructor
-	public Student(String firstname, String lastname, String course, String country) {
+	public Employee(String firstname, String lastname, String email) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
-		this.course = course;
-		this.country = country;
+		this.email = email;
 	}
 
 	//Getter & Setter Methods
-	public int getStudentid() {
-		return studentid;
+	public int getEmployeeid() {
+		return employeeid;
 	}
 
-	public void setStudentid(int studentid) {
-		this.studentid = studentid;
+	public void setEmployeeid(int employeeid) {
+		this.employeeid = employeeid;
 	}
 
 	public String getFirstname() {
@@ -67,21 +65,14 @@ public class Student {
 		this.lastname = lastname;
 	}
 
-	public String getCourse() {
-		return course;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setCourse(String course) {
-		this.course = course;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
 
 
 }
